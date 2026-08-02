@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>auto-rip</title>
+
+    <style>
+        body {
+            background-color: grey;
+            font-family: sans-serif;
+            color: #f2f2f2;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        form {
+            max-width: 420px;      /* wider box */
+            margin: 0 auto;
+            padding: 40px;         /* more padding */
+            background: rgba(0,0,0,0.25);
+            border-radius: 10px;
+            backdrop-filter: blur(4px);
+        }
+
+        input, select, button {
+            padding: 12px;
+            margin: 10px auto;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            display: block;        /* centers them */
+            width: 90%;            /* centered input boxes */
+        }
+
+        input, select {
+            background: #e6e6e6;
+            color: #333;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus, select:focus {
+            background: #ffffff;
+            box-shadow: 0 0 6px rgba(255,255,255,0.6);
+            outline: none;
+        }
+
+        button {
+            background: #4caf50;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>auto-rip</h1>
+
+    <form method="POST" action="/run">
+        <input type="text" name="message" placeholder="url">
+        <input type="text" name="path" placeholder="path">
+
+        <select name="source">
+            <option value="youtube">youtube</option>
+            <option value="pbs">pbs</option>
+            <option value="dvd">dvd</option>
+        </select>
+
+        <select name="type">
+            <option value="show">show</option>
+            <option value="movie">movie</option>
+            <option value="documentary">documentary</option>
+            <option value="video">video</option>
+        </select>
+
+        <button type="submit">rip/download</button>
+    </form>
+</body>
+</html>
