@@ -62,7 +62,9 @@ class MyHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         try:
-            with open("index.html", "rb") as f:
+            CONFIG_HTML = os.path.expanduser("~/.config/autorip/index.html") # config html for web ui
+
+            with open(CONFIG_HTML, "rb") as f:
                 self.send_response(200)
                 self.send_header("Content-type", "text/html")
                 self.end_headers()
