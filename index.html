@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
+<html> <!-- required -->
+<head> <!-- required -->
+    <meta charset="UTF-8"> <!-- required -->
     <title>auto-rip</title>
 
     <style>
@@ -67,29 +67,29 @@
             transform: scale(0.97);
         }
     </style>
-</head>
+</head> <!-- required -->
 
-<body>
+<body> <!-- required -->
     <h1>auto-rip</h1>
 
-    <form method="POST" action="/run">
-        <input type="text" name="message" placeholder="url">
-        <input type="text" name="path" placeholder="path">
+    <form method="POST" action="/run"> <!-- required -->
+        <input type="text" name="message" placeholder="url"> <!-- required -->
+        <input type="text" name="path" placeholder="path"> <!-- required -->
 
-        <select name="source">
-            <option value="youtube">youtube</option>
-            <option value="pbs">pbs</option>
-            <option value="dvd">dvd</option>
-        </select>
+        <select name="source"> <!-- required -->
+            <option value="youtube">youtube</option> <!-- required -->
+            <option value="pbs">pbs</option> <!-- required -->
+            <option value="dvd">dvd</option> <!-- required -->
+        </select> <!-- required -->
 
-        <select name="type">
-            <option value="show">show</option>
-            <option value="movie">movie</option>
-            <option value="documentary">documentary</option>
-            <option value="video">video</option>
-        </select>
+        <select name="type"> <!-- required -->
+            <option value="show">show</option> <!-- required -->
+            <option value="movie">movie</option> <!-- required -->
+            <option value="documentary">documentary</option> <!-- required -->
+            <option value="video">video</option> <!-- required -->
+        </select> <!-- required -->
 
-        <button type="submit">rip/download</button>
-    </form>
-</body>
-</html>
+        <button type="submit">rip/download</button> <!-- required -->
+    </form> <!-- required -->
+</body> <!-- required -->
+</html> <!-- required -->
