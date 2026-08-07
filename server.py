@@ -3,6 +3,7 @@ from urllib.parse import parse_qs
 from yt_dlp import YoutubeDL
 import os
 
+CONFIG_HTML = os.path.expanduser("~/.config/autorip/index.html") # config html for web ui
 
 # rip/download functions
 
@@ -62,8 +63,6 @@ class MyHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         try:
-            CONFIG_HTML = os.path.expanduser("~/.config/autorip/index.html") # config html for web ui
-
             with open(CONFIG_HTML, "rb") as f:
                 self.send_response(200)
                 self.send_header("Content-type", "text/html")
@@ -98,7 +97,7 @@ class MyHandler(BaseHTTPRequestHandler):
         source_func(url_value, source_value, type_value, path_value)
 
         try:
-            with open("index.html", "rb") as f:
+            with open(CONFIG_HTML, "rb") as f:
                 self.send_response(200)
                 self.send_header("Content-type", "text/html")
                 self.end_headers()
